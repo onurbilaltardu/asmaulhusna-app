@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>99 Names of Allah – Asmaul Husna</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>99 Names of Allah</h1>
+        <p class="subtitle">Asmaul Husna • meanings • favorites • simple dhikr counter</p>
+      </div>
+      <button id="themeToggle" class="ghost-btn" aria-label="Toggle dark mode">🌙</button>
+    </header>
+
+    <section class="controls">
+      <input id="searchInput" type="text" placeholder="Search by name, transliteration or meaning..." />
+      <div class="tabs">
+        <button class="tab active" data-filter="all">All</button>
+        <button class="tab" data-filter="favorites">Favorites</button>
+      </div>
+    </section>
+
+    <main>
+      <div id="stats" class="stats"></div>
+      <div id="namesGrid" class="names-grid"></div>
+    </main>
+  </div>
+
+  <div id="detailModal" class="modal hidden" aria-hidden="true">
+    <div class="modal-card">
+      <button id="closeModal" class="close-btn" aria-label="Close">✕</button>
+      <div id="modalContent"></div>
+
+      <section class="counter-box">
+        <h3>Dhikr Counter</h3>
+        <p class="counter-help">Tap the button to count. Vibration works on supported phones at 33 and 99.</p>
+        <div class="counter-number" id="counterValue">0</div>
+        <div class="counter-actions">
+          <button id="countBtn" class="primary-btn">+1 Count</button>
+          <button id="resetBtn" class="secondary-btn">Reset</button>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
